@@ -76,12 +76,24 @@ JSP/Servlet 기반 MVC 웹 애플리케이션의 전체 구조를 직접 설계�
 ### 5. Admin
 
 * 관리자 전용 기능 분리
-* 공연 관리 기능
-* 예매 및 후기 관리 기능
+* 공연 검색 및 저장, 회차 등록
+* 예매 로그 조회
+* 후기 및 댓글 관리
 
 ---
 
 ## What I Focused On
+
+### Reservation Type Branching
+
+공연별 예매 유형에 따라 좌석형 / 자유석 등 예매 흐름이 달라지도록 분기 처리했습니다.  
+예매 방식에 맞는 화면과 로직을 연결하여 하나의 서비스 안에서 다양한 티켓 유형을 처리할 수 있도록 구성했습니다.
+
+### Free-ticket Reservation Logic
+
+자유석 예매에서는 수량 선택뿐 아니라 이용 일수에 따른 요금 정책을 함께 반영했습니다.  
+1일권, 2일권, 3일권으로 구성하고, 2일권과 3일권에는 할인 정책을 적용하여  
+단순 수량 선택을 넘어 예매 조건 자체를 서비스 로직으로 구현했습니다.
 
 ### Domain-based Structure
 
@@ -93,11 +105,6 @@ JSP/Servlet 기반 MVC 웹 애플리케이션의 전체 구조를 직접 설계�
 프레임워크에 의존하지 않고   
 요청 → Controller → DAO / Service → JSP 응답 흐름을 직접 구현하며   
 웹 애플리케이션의 동작 원리를 구조적으로 이해하는 데 집중했습니다.
-
-### Reservation-centered Service Design
-
-단순 게시판 프로젝트가 아니라   
-공연 조회부터 예매, 후기, 운영 관리까지 이어지는 서비스형 웹 애플리케이션 흐름을 직접 설계했습니다.
 
 ---
 
@@ -190,8 +197,9 @@ git clone https://github.com/DevLucia-21/JSP_Performance-Festival-Reservation.gi
 ### 2. Configure Environment
 
 - Apache Tomcat 설정
-- MySQL 데이터베이스 생성 및 연결
-- 프로젝트 실행에 필요한 로컬 환경 구성
+- MySQL 데이터베이스 생성
+- `DBUtil.java`의 DB 연결 정보를 로컬 환경에 맞게 설정
+- 외부 API 사용 시 `config.properties`에 `API_KEY` 설정
 
 ### 3. Run Project
 
