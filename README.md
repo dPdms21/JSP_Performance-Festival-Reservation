@@ -209,13 +209,55 @@ git clone https://github.com/DevLucia-21/JSP_Performance-Festival-Reservation.gi
 
 ## Screenshots
 
-> 추후 추가 예정
+### 1. Performance List
 
-* Main Page
-* Performance List Page
-* Reservation Page
-* Review Board Page
-* Admin Page
+공연 및 페스티벌 목록을 조회할 수 있는 화면입니다.  
+등록된 공연 정보를 한눈에 확인할 수 있도록 구성했습니다.
+
+![Performance List](docs/images/performance-list.png)
+
+---
+
+### 2. Performance Detail
+
+공연 상세 정보와 예매에 필요한 날짜, 시간, 수량 정보를 선택할 수 있는 화면입니다.
+
+![Performance Detail](docs/images/performance-detail.png)
+
+---
+
+### 3. Seat Selection
+
+공연 유형에 따라 좌석 선택 방식이 달라지도록 구성했으며,  
+좌석형 공연에서는 좌석 등급과 배치에 따라 예매를 진행할 수 있습니다.
+
+![Seat Selection](docs/images/seat-selection.png)
+
+---
+
+### 4. Free-ticket Reservation
+
+자유석 예매 화면으로, 예매 수량과 이용 일수를 선택할 수 있도록 구현했습니다.  
+1일권, 2일권, 3일권에 따른 요금 정책도 함께 반영했습니다.
+
+![Free-ticket Reservation](docs/images/free-ticket.png)
+
+---
+
+### 5. Reservation History
+
+마이페이지에서 사용자의 예매 내역을 확인하고, 예매 상태를 조회할 수 있는 화면입니다.
+
+![Reservation History](docs/images/reservation-history.png)
+
+---
+
+## ERD
+
+PerFortival의 데이터 구조는 회원, 공연, 회차, 좌석, 예매, 후기, 댓글을 중심으로 설계했습니다.  
+공연 조회부터 예매, 예매 내역 관리, 후기 작성까지 하나의 서비스 흐름이 DB 구조와 연결되도록 구성했습니다.
+
+![PerFortival ERD](docs/images/perfortival-erd.png)
 
 ---
 
