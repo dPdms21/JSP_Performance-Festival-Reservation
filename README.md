@@ -191,7 +191,7 @@ src/main/webapp
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/DevLucia-21/JSP_Performance-Festival-Reservation.git
+git clone https://github.com/dPdms21/JSP_Performance-Festival-Reservation.git
 ```
 
 ### 2. Configure Environment
@@ -265,4 +265,4 @@ PerFortival의 데이터 구조는 회원, 공연, 회차, 좌석, 예매, 후�
 
 Yeeun Park
 
-GitHub: [DevLucia-21](https://github.com/DevLucia-21)
+GitHub: [dPdms21](https://github.com/dPdms21)
